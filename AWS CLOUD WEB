@@ -183,10 +183,6 @@ sudo yum install -y python3-certbot-apache
 sudo certbot --apache
 ```
 
-Access site:
-
-```
-https://yourdomain.com
 ```
 
 ---
@@ -202,29 +198,6 @@ https://yourdomain.com
 
 ---
 
-## Author
-
-**Your Name**
-Cloud Infrastructure & Linux Administrator
-GitHub: [yourusername](https://github.com/yourusername)
-LinkedIn: [yourprofile](https://linkedin.com/in/yourprofile)
-
-```
-
----
-
-## 🚀 Final Steps
-
-1. Upload this folder to GitHub:
-   - Create repo `aws-cloud-web-hosting`
-   - Commit all files (`index.html`, `upload.php`, etc.)
-2. Copy the public repo link.
-3. Add it to your resume:
-```
-
-Project: AWS Cloud Web Hosting & Deployment
-Repo: [https://github.com/yourusername/aws-cloud-web-hosting](https://github.com/yourusername/aws-cloud-web-hosting)
-Demo: [https://yourdomain.com](https://yourdomain.com)
 
 ```
 
