@@ -1,19 +1,11 @@
-Awesome 🔥 — let’s build your **complete AWS Cloud Web Hosting Project** package step by step.
-This will be a real-world project you can upload to **GitHub** and proudly showcase on your **resume** or **LinkedIn**.
 
----
 
-# 🌐 Project Title: **AWS Cloud Web Hosting & Deployment System**
+ 🌐 Project Title: **AWS Cloud Web Hosting & Deployment System**
 
 A professional full-stack hosting project demonstrating AWS EC2 setup, Apache configuration, domain linking, file uploads, SSL, and admin management.
 
----
+ Project Folder Structure
 
-## 📁 Project Folder Structure
-
-We’ll make this simple and realistic.
-
-```
 aws-web-hosting-project/
 │
 ├── index.html             → Main website homepage
@@ -21,12 +13,11 @@ aws-web-hosting-project/
 ├── admin.php              → Host/admin dashboard
 ├── style.css              → Styling for your pages
 ├── README.md              → Project documentation
-└── uploads/               → Stores uploaded files (auto-created)
-```
+└── uploads/               → Stores uploaded files
 
----
 
-## 🧱 1️⃣ index.html
+
+index.html
 
 Create this file at `/var/www/html/index.html` or in your local project folder first.
 
@@ -40,7 +31,7 @@ Create this file at `/var/www/html/index.html` or in your local project folder f
 </head>
 <body>
   <header>
-    <h1>🚀 AWS Cloud Web Hosting Project</h1>
+    <h1> AWS Cloud Web Hosting Project</h1>
     <p>Hosted on Amazon EC2 (Linux) with Apache + PHP + SSL</p>
   </header>
 
@@ -61,7 +52,7 @@ Create this file at `/var/www/html/index.html` or in your local project folder f
 
 ---
 
-## 🧠 2️⃣ upload.php
+ upload.php
 
 This script stores uploads in `/uploads/` with unique user folders.
 
@@ -78,9 +69,9 @@ if (!file_exists($dir)) mkdir($dir, 0777, true);
 foreach ($_FILES["files"]["name"] as $i => $name) {
     $target = $dir . basename($name);
     if (move_uploaded_file($_FILES["files"]["tmp_name"][$i], $target)) {
-        echo "✅ File $name uploaded successfully.<br>";
+        echo "File $name uploaded successfully.<br>";
     } else {
-        echo "❌ Error uploading $name.<br>";
+        echo " Error uploading $name.<br>";
     }
 }
 echo "<br><a href='$dir'>View My Files</a> | <a href='index.html'>Back</a>";
@@ -89,14 +80,14 @@ echo "<br><a href='$dir'>View My Files</a> | <a href='index.html'>Back</a>";
 
 ---
 
-## 🔐 3️⃣ admin.php
+admin.php
 
 Host-only dashboard showing all user uploads.
 
 ```php
 <?php
 $root = "uploads/";
-echo "<h1>🗂️ Admin Dashboard — All Uploaded Files</h1>";
+echo "<h1> Admin Dashboard — All Uploaded Files</h1>";
 
 if (is_dir($root)) {
     $users = scandir($root);
@@ -120,7 +111,7 @@ if (is_dir($root)) {
 
 ---
 
-## 🎨 4️⃣ style.css
+## style.css
 
 ```css
 body {
@@ -163,26 +154,6 @@ footer {
 
 ---
 
-## 🧰 5️⃣ README.md (Documentation)
-
-```markdown
-# AWS Cloud Web Hosting & Deployment Project
-
-## Overview
-This project demonstrates hosting a full web application on AWS EC2 (Amazon Linux). It includes:
-- Web server (Apache)
-- PHP backend for uploads
-- Custom domain (Dynamic DNS / Freenom)
-- HTTPS via Let’s Encrypt
-- Admin dashboard to manage uploaded files
-
-## Technologies Used
-- **AWS EC2 (Amazon Linux 2)**
-- **Apache HTTP Server**
-- **PHP 8.x**
-- **HTML/CSS/JS**
-- **Let’s Encrypt SSL**
-- **Cron jobs for automation**
 
 ## Folder Structure
 ```
